@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="generator" content="JSDoc 3.5.5">
+  <meta charset="utf-8">
+  <title>BBM Enterprise SDK for JavaScript 1.2.0 &raquo; Class: SetupError</title>
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Karla:400,400i,700,700i" type="text/css">
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Noto+Serif:400,400i,700,700i" type="text/css">
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Inconsolata:500" type="text/css">
+  <link href="css/baseline.css" rel="stylesheet">
+</head>
+
+<body onload="prettyPrint()">
+  <nav id="jsdoc-navbar" role="navigation" class="jsdoc-navbar">
+    <div id="jsdoc-navbar-container">
+      <div id="jsdoc-navbar-content">
+        <a href="index.html" class="jsdoc-navbar-package-name">BBM Enterprise SDK for JavaScript 1.<wbr>2.<wbr>0</a>
+      </div>
+    </div>
+  </nav>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <div class="symbol-detail-labels"><span class="label label-kind">class</span>&nbsp;<span class="label label-static">static</span></div>
+            <h1><small><a href="BBMEnterprise.html">BBMEnterprise</a>.<wbr><a href="BBMEnterprise.Event.html">Event</a>.<wbr></small><span class="symbol-name">SetupError</span></h1>
+            <div class="symbol-classdesc">
+              <p>The structure of the <a href="BBMEnterprise.html#event:setupError">BBMEnterprise#event:setupError</a> event. This event is emitted when a problem with the setup of the Spark SDK has occurred.</p>
+            </div>
+            <dl class="dl-compact">
+            </dl>
+            <dl class="dl-compact">
+            </dl>
+          </header>
+          <section id="summary">
+            <div class="summary-callout">
+              <h2 class="summary-callout-heading">Property</h2>
+              <div class="summary-content">
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.Event.SetupError.html#.Value">Value</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                </div>
+                <div class="summary-column">
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+          </section>
+          <section>
+            <h2>Property</h2>
+            <section>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".Value"><span class="symbol-name">Value</span><small class="property-type">
+            &nbsp;string</small></h3>
+              <p>The possible error values that can be emitted in the
+                <a href="BBMEnterprise.html#event:setupError">BBMEnterprise#event:setupError</a> event.</p>
+              <section>
+                <h4>Properties</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>PermanentServerError</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>There was a serious problem with one of the setup steps.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Forbidden</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The authentication token provided to the SDK via the
+                          <a href="BBMEnterprise.html#authTokenCallback">BBMEnterprise#authTokenCallback</a> could not be validated or did not provide the user with sufficient permissions to access the Spark infrastructure.</p>
+                        <p>The SDK will have already made at least one attempt to refresh the token via a call to <a href="BBMEnterprise.html#authTokenCallback">BBMEnterprise#authTokenCallback</a> while attempting to retain the client's registration status
+                          with the Spark infrastructure before a <a href="BBMEnterprise.html#event:setupError">BBMEnterprise#event:setupError</a> event is issued with this failure reason.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>EndpointDeregistered</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>Another client has superseded this client's registration with the Spark infrastructure. This client is no longer registered and can no longer service requests.</p>
+                        <p>IMPORTANT: Do not call <a href="BBMEnterprise.html#setupStart">BBMEnterprise#setupStart</a> automatically when this failure reason is reported as this can result in clients alternately being kicked off the Spark infrastructure.
+                          It is recommended that the application notify the user of this condition and allow them to log-in again.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>DomainConfigurationMismatch</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>Setup failed because the SDK was configured to use the BlackBerry Key Management Service (KMS) and the domain was configured to use Cloud Key Storage. The application or the domain is misconfigured and manual intervention is required.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery.cookie.js"></script>
+  <script src="scripts/tree.jquery.js"></script>
+  <script src="scripts/prettify.js"></script>
+  <script src="scripts/jsdoc-toc.js"></script>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/scrollanchor.js"></script>
+</body>
+
+</html>

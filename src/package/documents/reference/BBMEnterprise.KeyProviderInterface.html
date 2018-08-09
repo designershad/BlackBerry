@@ -1,0 +1,692 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="generator" content="JSDoc 3.5.5">
+  <meta charset="utf-8">
+  <title>BBM Enterprise SDK for JavaScript 1.2.0 &raquo; Interface: KeyProviderInterface</title>
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Karla:400,400i,700,700i" type="text/css">
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Noto+Serif:400,400i,700,700i" type="text/css">
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Inconsolata:500" type="text/css">
+  <link href="css/baseline.css" rel="stylesheet">
+</head>
+
+<body onload="prettyPrint()">
+  <nav id="jsdoc-navbar" role="navigation" class="jsdoc-navbar">
+    <div id="jsdoc-navbar-container">
+      <div id="jsdoc-navbar-content">
+        <a href="index.html" class="jsdoc-navbar-package-name">BBM Enterprise SDK for JavaScript 1.<wbr>2.<wbr>0</a>
+      </div>
+    </div>
+  </nav>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <div class="symbol-detail-labels"><span class="label label-kind">interface</span>&nbsp;<span class="label label-static">static</span></div>
+            <h1><small><a href="BBMEnterprise.html">BBMEnterprise</a>.<wbr></small><span class="symbol-name">KeyProviderInterface</span></h1>
+            <div class="symbol-description">
+              <p>The KeyProviderInterface defines the interface through which the Spark SDK interacts with the application layer to import and export the key data required to perform protected messaging.<br/>
+                <br/> This interface is used only when the SDK is configured to use Cloud Key Storage. When the SDK is configured to use the BlackBerry Key Management Service (KMS), this interface is not required.</p>
+            </div>
+            <dl class="dl-compact">
+            </dl>
+          </header>
+          <section id="summary">
+            <div class="summary-callout">
+              <h2 class="summary-callout-heading">Properties</h2>
+              <div class="summary-content">
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#.FailureChoice">FailureChoice</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#.AbandonSetup">AbandonSetup</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#.GenerateNewKeys">GenerateNewKeys</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#.GetProfileKeys">GetProfileKeys</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                </div>
+              </div>
+            </div>
+            <div class="summary-callout">
+              <h2 class="summary-callout-heading">Methods</h2>
+              <div class="summary-content">
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#getChatKey">getChatKey(chatId)</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#getChatKeys">getChatKeys()</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#getProfileKeys">getProfileKeys()</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#getPublicKeys">getPublicKeys(regId)</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#profileKeysImportFailed">profileKeysImportFailed([error])</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#removeChatKey">removeChatKey(chatId)</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#saveChatKey">saveChatKey(chatId, key)</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#saveProfileKeys">saveProfileKeys(keys)</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="summary-callout">
+              <h2 class="summary-callout-heading">Abstract types</h2>
+              <div class="summary-content">
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#.ProfileKeys">ProfileKeys</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.KeyProviderInterface.html#.PublicKeys">PublicKeys</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Properties</h2>
+            <section>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".FailureChoice"><span class="symbol-name">FailureChoice</span><small class="property-type">
+            &nbsp;string</small></h3>
+              <p>The enumeration of options an application has when the
+                <a href="BBMEnterprise.KeyProviderInterface.html#profileKeysImportFailed">BBMEnterprise.KeyProviderInterface#profileKeysImportFailed</a> function is called.</p>
+              <section>
+                <h4>Properties</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>GenerateNewKeys</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The SDK will generate new profile keys for the user and proceed with setup. The new keys will be relayed to the application once successfully generated <a href="BBMEnterprise.KeyProviderInterface.html#saveProfileKeys">BBMEnterprise.KeyProviderInterface#saveProfileKeys</a>.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>GetProfileKeys</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The SDK will request new profile keys with another call to
+                          <a href="BBMEnterprise.KeyProviderInterface.html#getProfileKeys">BBMEnterprise.KeyProviderInterface#getProfileKeys</a>. This will allow the application to provide updated keys or to attempt another fetch of the keys. If the new
+                          profile keys fail to import again, the
+                          <a href="BBMEnterprise.KeyProviderInterface.html#profileKeysImportFailed">BBMEnterprise.KeyProviderInterface#profileKeysImportFailed</a> function will also be called again.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>AbandonSetup</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The SDK will abandon its attempt to setup for the local user. The promise returned by <a href="BBMEnterprise.html#setup">BBMEnterprise#setup</a> will be rejected with a
+                          <a href="BBMEnterprise.html#event:registrationChanged">BBMEnterprise#event:registrationChanged</a> event with a failure reason of <a href="BBMEnterprise.Event.RegistrationChanged.html#.Failure">'FailedToImportProfileKeys'</a>.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".AbandonSetup"><span class="symbol-name">AbandonSetup</span><small class="property-type">
+            &nbsp;unknown</small></h3>
+              <p>The SDK will abandon its attempt to setup for the local user. The promise returned by <a href="BBMEnterprise.html#setup">BBMEnterprise#setup</a> will be rejected with a
+                <a href="BBMEnterprise.html#event:registrationChanged">BBMEnterprise#event:registrationChanged</a> event with a failure reason of <a href="BBMEnterprise.Event.RegistrationChanged.html#.Failure">'FailedToImportProfileKeys'</a>.</p>
+              <dl class="dl-compact">
+                <dt>Default value</dt>
+                <dd>AbandonSetup</dd>
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".GenerateNewKeys"><span class="symbol-name">GenerateNewKeys</span><small class="property-type">
+            &nbsp;unknown</small></h3>
+              <p>The SDK will generate new profile keys for the user and proceed with setup. The new keys will be relayed to the application once successfully generated <a href="BBMEnterprise.KeyProviderInterface.html#saveProfileKeys">BBMEnterprise.KeyProviderInterface#saveProfileKeys</a>.</p>
+              <dl class="dl-compact">
+                <dt>Default value</dt>
+                <dd>GenerateNewKeys</dd>
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".GetProfileKeys"><span class="symbol-name">GetProfileKeys</span><small class="property-type">
+            &nbsp;unknown</small></h3>
+              <p>The SDK will request new profile keys with another call to
+                <a href="BBMEnterprise.KeyProviderInterface.html#getProfileKeys">BBMEnterprise.KeyProviderInterface#getProfileKeys</a>. This will allow the application to provide updated keys or to attempt another fetch of the keys. If the new profile
+                keys fail to import again, the
+                <a href="BBMEnterprise.KeyProviderInterface.html#profileKeysImportFailed">BBMEnterprise.KeyProviderInterface#profileKeysImportFailed</a> function will also be called again.</p>
+              <dl class="dl-compact">
+                <dt>Default value</dt>
+                <dd>GetProfileKeys</dd>
+              </dl>
+            </section>
+            <h2>Methods</h2>
+            <section>
+              <h3 id="getChatKey"><span class="symbol-name">getChatKey</span><span class="signature"><span class="signature-params">(chatId)</span>&nbsp;&rarr; <span class="signature-returns"> Promise containing Uint8Array</span></span>
+              </h3>
+              <p>Get the chat key data associated with the given chatId.</p>
+              <section>
+                <h4>Parameter</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>chatId</p>
+                      </td>
+                      <td>
+                        <p>string</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The identifier for the chat whose key is to be retrieved from the key provider's underlying storage.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing Uint8Array</code>&nbsp;
+                    <p>The promise of the chat key data.</p>
+                  </p>
+                  <p> When the promise is rejected with
+                    <a href="BBMEnterprise.Error.NotFoundError.html">BBMEnterprise.Error.NotFoundError</a>, the chat key is known not to exist. When a chat key is known not to exist, the chat will be automatically cleaned up as recovery of chat contents
+                    will not be possible.
+                  </p>
+                  <p> Any other rejection error will be treated as a temporary error and another call to <a href="BBMEnterprise.KeyProviderInterface.html#getChatKey">BBMEnterprise.KeyProviderInterface#getChatKey</a> will be made the next time the key is needed.
+                    This will result in sub-optimal behaviour patterns and any encrypted information in the chat details and all messages will not be recoverable until
+                    <a href="BBMEnterprise.KeyProviderInterface.html#getChatKey">BBMEnterprise.KeyProviderInterface#getChatKey</a> resolves with a valid key.</p>
+                </dd>
+              </dl>
+              <h3 id="getChatKeys"><span class="symbol-name">getChatKeys</span><span class="signature"><span class="signature-params">()</span>&nbsp;&rarr; <span class="signature-returns"> Promise containing Object with Uint8Array properties</span></span>
+              </h3>
+              <p>Get the key data associated with all of the chats known to the user.</p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing Object with Uint8Array properties</code>&nbsp;
+                    <p>The promise of the known chat key data returned as a dictionary object. The object members are expected to be the chatIds and the member values are the keys associated with the chatId.</p>
+                  </p>
+                  <p> When no chat keys are known an empty object is used to resolve the promise.
+                  </p>
+                  <p> Any rejection of this promise will be treated as a temporary failure and the chat keys will be recovered later on demand with a call to
+                    <a href="BBMEnterprise.KeyProviderInterface.html#getChatKey">BBMEnterprise.KeyProviderInterface#getChatKey</a>.</p>
+                </dd>
+              </dl>
+              <h3 id="getProfileKeys"><span class="symbol-name">getProfileKeys</span><span class="signature"><span class="signature-params">()</span>&nbsp;&rarr; <span class="signature-returns"> Promise containing <a href="BBMEnterprise.KeyProviderInterface.html#.ProfileKeys">BBMEnterprise.KeyProviderInterface.ProfileKeys</a></span></span>
+              </h3>
+              <p>Get the promise of the local user's encryption and signing key pairs.</p>
+              <p>If either the encryption or the signing key pair provided cannot be successfully imported, the SDK will call the
+                <a href="BBMEnterprise.KeyProviderInterface.html#profileKeysImportFailed">BBMEnterprise.KeyProviderInterface#profileKeysImportFailed</a> function.
+              </p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing <a href="BBMEnterprise.KeyProviderInterface.html#.ProfileKeys">BBMEnterprise.KeyProviderInterface.ProfileKeys</a></code>&nbsp;
+                    <p>The promise will be resolved with the local user's
+                      <a href="BBMEnterprise.KeyProviderInterface.html#.ProfileKeys">BBMEnterprise.KeyProviderInterface.ProfileKeys</a></p>
+                  </p>
+                  <p> If no keys are available, resolving the promise with an empty object is allowed. New keys will be generated automatically and a call to
+                    <a href="BBMEnterprise.KeyProviderInterface.html#saveProfileKeys">BBMEnterprise.KeyProviderInterface#saveProfileKeys</a> will be made.</p>
+                  <p> The promise may be rejected with any error. When the promise is rejected, the
+                    <a href="BBMEnterprise.KeyProviderInterface.html#profileKeysImportFailed">BBMEnterprise.KeyProviderInterface#profileKeysImportFailed</a> function will be called with the error used to reject the promise to ask the application to provide
+                    feedback in how it would like the SDK to handle the failure.</p>
+                </dd>
+              </dl>
+              <h3 id="getPublicKeys"><span class="symbol-name">getPublicKeys</span><span class="signature"><span class="signature-params">(regId)</span>&nbsp;&rarr; <span class="signature-returns"> Promise containing <a href="BBMEnterprise.KeyProviderInterface.html#.PublicKeys">BBMEnterprise.KeyProviderInterface.PublicKeys</a></span></span>
+              </h3>
+              <p>Get the public key data for the user identified by their regId.</p>
+              <section>
+                <h4>Parameter</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>regId</p>
+                      </td>
+                      <td>
+                        <p>string</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The regId of the user whose public keys are to be retrieved.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing <a href="BBMEnterprise.KeyProviderInterface.html#.PublicKeys">BBMEnterprise.KeyProviderInterface.PublicKeys</a></code>&nbsp;
+                    <p>The promise of the user's public encryption and signing keys.</p>
+                  </p>
+                  <p> The promise may be rejected with any error because the keys were not found or they failed to decode. When this occurs, the user cannot be invited to join chats and any messages from the user in a chat will not be verifiable.</p>
+                </dd>
+              </dl>
+              <h3 id="profileKeysImportFailed"><span class="symbol-name">profileKeysImportFailed</span><span class="signature"><span class="signature-params">([error])</span>&nbsp;&rarr; <span class="signature-returns"> Promise containing BBMEnterprise.KeyProviderInterface.FailureChoice</span></span>
+              </h3>
+              <p>Called when the keys returned via
+                <a href="BBMEnterprise.KeyProviderInterface.html#getProfileKeys">BBMEnterprise.KeyProviderInterface#getProfileKeys</a> have failed to import. The application should return an indication of how it would like the SDK to handle the failure.</p>
+              <section>
+                <h4>Parameter</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>error</p>
+                      </td>
+                      <td>
+                        <p>any</p>
+                      </td>
+                      <td>
+                        <p>Yes</p>
+                      </td>
+                      <td>
+                        <p>Any error thrown synchronously or used to reject a promise while interacting with the application supplied KeyProviderInterface implementation object to get the profile keys will be captured and returned to the application code
+                          via this parameter. This will be undefined when the failure occurs outside of application provided code.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing BBMEnterprise.KeyProviderInterface.FailureChoice</code>&nbsp;
+                    <p>The way the application would like the SDK to handle the failure to import the profile keys.</p>
+                  </p>
+                  <p> This returns a promise to enable the application to delay the next call to <a href="BBMEnterprise.KeyProviderInterface.html#getProfileKeys">BBMEnterprise.KeyProviderInterface#getProfileKeys</a> until the application is ready.</p>
+                  <p> When the promise is rejected for any reason, setup of the SDK will be aborted.
+                  </p>
+                </dd>
+              </dl>
+              <h3 id="removeChatKey"><span class="symbol-name">removeChatKey</span><span class="signature"><span class="signature-params">(chatId)</span></span>
+              </h3>
+              <p>Remove the chat key data associated with the given chatId.</p>
+              <p>It is the app's responsibility to ensure that the chat key data is removed from storage.</p>
+              <p>Failure to successfully remove the chat key data will result in a leakage of chat keys in external storage.</p>
+              <section>
+                <h4>Parameter</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>chatId</p>
+                      </td>
+                      <td>
+                        <p>string</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The identifier for the chat whose chat key is to be removed from the key provider and its underlying storage.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p>void</p>
+                </dd>
+              </dl>
+              <h3 id="saveChatKey"><span class="symbol-name">saveChatKey</span><span class="signature"><span class="signature-params">(chatId, key)</span></span>
+              </h3>
+              <p>Save the chat key data associated with the given chatId.</p>
+              <p>It is the app's responsibility to ensure that the chat key data is safely stored and can be retrieved during the next session.</p>
+              <p>Failure to successfully save the chat key data will result in the chat identified by chatId being inaccessible during the next session. The user will have to leave the chat and get re-invited to recover the chat key.</p>
+              <section>
+                <h4>Parameters</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>chatId</p>
+                      </td>
+                      <td>
+                        <p>string</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The identifier for the chat whose chat key is to be stored by the key provider in its underlying storage.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>key</p>
+                      </td>
+                      <td>
+                        <p>Uint8Array</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The key data.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p>void</p>
+                </dd>
+              </dl>
+              <h3 id="saveProfileKeys"><span class="symbol-name">saveProfileKeys</span><span class="signature"><span class="signature-params">(keys)</span>&nbsp;&rarr; <span class="signature-returns"> Promise</span></span>
+              </h3>
+              <p>
+                <p>Save the local user's encryption and signing key pairs.</p>
+              </p>
+              <p>
+                <p>It is the app's responsibility to ensure that these keys are safely stored and can be retrieved during the next session.</p>
+              </p>
+              <p>
+                <p>Failure to successfully save the keys will have the following impacts on behaviour:
+                </p>
+              </p>
+              <ol>
+                <li>Other users cannot invite the local user to chats because the chat key will not be encrypted with current public encryption key.</li>
+                <li>Other users will not be able to verify any new message sent to a chat during this session because the user's current public signing key will not be available for others to use.</li>
+                <li>Messages sent during this session will not be verifiable as being sent by the local user during the next session because the keys used for the current session will have been lost.</li>
+              </ol>
+              <section>
+                <h4>Parameter</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>keys</p>
+                      </td>
+                      <td>
+                        <p><a href="BBMEnterprise.KeyProviderInterface.html#.ProfileKeys">BBMEnterprise.KeyProviderInterface.ProfileKeys</a></p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The local user's encryption and signing key pairs.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise</code>&nbsp;
+                    <p>A promise indicating that the keys have been saved. The return value of the promise is ignored. Rejecting the promise is likewise ignored. Be aware that if the KeyProviderInterface implementation cannot later save the keys through
+                      some internal mechanism, then the messages sent and received during this session will become impossible to decrypt once the session ends.</p>
+                  </p>
+                </dd>
+              </dl>
+            </section>
+            <h2>Abstract types</h2>
+            <section>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".ProfileKeys"><span class="symbol-name">ProfileKeys</span><small class="property-type">
+            &nbsp;Object</small></h3>
+              <p>A structure to encapsulate the local user's encryption and signing key pairs.
+              </p>
+              <section>
+                <h4>Properties</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>privateEncryptionKey</p>
+                      </td>
+                      <td>
+                        <p>Uint8Array</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The private encryption key data for the local user.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>privateSigningKey</p>
+                      </td>
+                      <td>
+                        <p>Uint8Array</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The private signing key data for the local user.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>publicEncryptionKey</p>
+                      </td>
+                      <td>
+                        <p>Uint8Array</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The public encryption key data for the local user.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>publicSigningKey</p>
+                      </td>
+                      <td>
+                        <p>Uint8Array</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The public signing key data for the local user.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".PublicKeys"><span class="symbol-name">PublicKeys</span><small class="property-type">
+            &nbsp;Object</small></h3>
+              <p>A structure to encapsulate a user's public keys that may be used for encryption and signing.</p>
+              <section>
+                <h4>Properties</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>encryptionKey</p>
+                      </td>
+                      <td>
+                        <p>Uint8Array</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The public encryption key data for the user.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>signingKey</p>
+                      </td>
+                      <td>
+                        <p>Uint8Array</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The public signing key data for the user.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery.cookie.js"></script>
+  <script src="scripts/tree.jquery.js"></script>
+  <script src="scripts/prettify.js"></script>
+  <script src="scripts/jsdoc-toc.js"></script>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/scrollanchor.js"></script>
+</body>
+
+</html>
