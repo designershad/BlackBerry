@@ -7,7 +7,6 @@ BEST PROJECT EVER
 ---
 
 ### RESOURCES
-======
 
 * https://www.youtube.com/watch?feature=player_embedded&v=310UDOFCLWM
 * https://developers.blackberry.com/us/en/resources/get-started/blackberry-spark-communications-platform-getting-started.html#step-3
