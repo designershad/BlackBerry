@@ -37,8 +37,8 @@ module.exports = {
   // Configuration information for a botlibre account. botlibre provides chatbot
   // services.
   botLibre: {
-    application: 'your_botlibre_application',
-    instance: 'your_botlibre_instance'
+    application: '3805035149723375663',
+    instance: '23162728'
   },
 
   // Configuration information for login to a google service account.
