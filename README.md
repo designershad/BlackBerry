@@ -15,4 +15,6 @@ BEST PROJECT EVER
 * https://developer.blackberry.com/files/bbm-enterprise/documents/guide/html/gettingStarted.html
 * (chatbot sample) https://www.platterz.ca/welcome 
 https://mdbootstrap.com/components/buttons/
+https://www.blackberry.com/content/dam/blackberry-com/Documents/pdf/enterprise/BlackBerry-Spark-Communications-Platform-Getting-Started-Workbook.pdf
+https://console.firebase.google.com/
 
