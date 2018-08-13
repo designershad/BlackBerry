@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="generator" content="JSDoc 3.5.5">
+  <meta charset="utf-8">
+  <title>BBM Enterprise SDK for JavaScript 1.2.0 &raquo; Class: RegistrationChanged</title>
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Karla:400,400i,700,700i" type="text/css">
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Noto+Serif:400,400i,700,700i" type="text/css">
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Inconsolata:500" type="text/css">
+  <link href="css/baseline.css" rel="stylesheet">
+</head>
+
+<body onload="prettyPrint()">
+  <nav id="jsdoc-navbar" role="navigation" class="jsdoc-navbar">
+    <div id="jsdoc-navbar-container">
+      <div id="jsdoc-navbar-content">
+        <a href="index.html" class="jsdoc-navbar-package-name">BBM Enterprise SDK for JavaScript 1.<wbr>2.<wbr>0</a>
+      </div>
+    </div>
+  </nav>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <div class="symbol-detail-labels"><span class="label label-kind">class</span>&nbsp;<span class="label label-static">static</span></div>
+            <h1><small><a href="BBMEnterprise.html">BBMEnterprise</a>.<wbr><a href="BBMEnterprise.Event.html">Event</a>.<wbr></small><span class="symbol-name">RegistrationChanged</span></h1>
+            <div class="symbol-classdesc">
+              <p>The structure of the <a href="BBMEnterprise.html#event:registrationChanged">BBMEnterprise#event:registrationChanged</a> event. This event indicates whether or not the Spark SDK was successfully setup or not.</p>
+            </div>
+            <dl class="dl-compact">
+            </dl>
+            <dl class="dl-compact">
+            </dl>
+          </header>
+          <section id="summary">
+            <div class="summary-callout">
+              <h2 class="summary-callout-heading">Properties</h2>
+              <div class="summary-content">
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.Event.RegistrationChanged.html#.Failure">Failure</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.Event.RegistrationChanged.html#failureReason">failureReason</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.Event.RegistrationChanged.html#pin">pin</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.Event.RegistrationChanged.html#regId">regId</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.Event.RegistrationChanged.html#state">state</a></dt>
+                    <dd>
+                    </dd>
+                    <dt><a href="BBMEnterprise.Event.RegistrationChanged.html#registrationToken">registrationToken</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+          </section>
+          <section>
+            <h2>Properties</h2>
+            <section>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".Failure"><span class="symbol-name">Failure</span><small class="property-type">
+            &nbsp;string</small></h3>
+              <p>The possible registration failure reasons of a
+                <a href="BBMEnterprise.html#event:registrationChanged">BBMEnterprise#event:registrationChanged</a> event. All of these failures are considered permanent failures from which the SDK cannot recover.
+              </p>
+              <p>When a registration failure has occurred, the SDK will automatically call
+                <a href="BBMEnterprise.html#shutdown">BBMEnterprise#shutdown</a> to terminate all connectivity against the Spark infrastructure.</p>
+              <p>An application may attempt recovery, however care should be taken to limit recovery attempts in quick succession. The SDK takes reasonable recovery steps internally before issuing a
+                <a href="BBMEnterprise.html#event:registrationChanged">BBMEnterprise#event:registrationChanged</a> event with a failure.</p>
+              <p>Unless otherwise specified, recovery using the same <a href="BBMEnterprise.html">BBMEnterprise</a> instance may be attempted by calling <a href="BBMEnterprise.html#setup">BBMEnterprise#setup</a> asynchronously. This will preserve the configuration
+                of the existing instance, including any chat identifiers in the filter that were added at instantiation or added subsequently via
+                <a href="BBMEnterprise.Messenger.html#filterAdd">BBMEnterprise.Messenger#filterAdd</a>.</p>
+              <p>Calling <a href="BBMEnterprise.html#setup">BBMEnterprise#setup</a> synchronously from within the event handler for a <a href="BBMEnterprise.html#event:registrationChanged">BBMEnterprise#event:registrationChanged</a> event will result in
+                a <a href="BBMEnterprise.Error.Error.html">BBMEnterprise.Error.Error</a> being thrown.</p>
+              <section>
+                <h4>Properties</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>GeneralFailure</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The registration failed for unspecified reasons. All errors that are not directly actionable by the application will have this failure reason.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>DeviceSwitchRequired</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The registration failed because another endpoint that supports only a single point of presence (SPoP) is currently registered with the Spark infrastructure.</p>
+                        <p>This account cannot be used with the SDK until such time that a persistent client that supports multiple points of presence (MPoP) has been registered and the current SPoP device has been deregistered.</p>
+                        <p>IMPORTANT: Do not call <a href="BBMEnterprise.html#setup">BBMEnterprise#setup</a> automatically when this failure reason is reported. Only accounts that have been upgraded to support MPoP via a persistent endpoint should re-attempt
+                          setup of the SDK.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>RegistrationRevoked</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>Another client has superseded this client's registration with the Spark infrastructure. This endpoint is no longer registered and can no longer service requests.</p>
+                        <p>IMPORTANT: Do not call <a href="BBMEnterprise.html#setup">BBMEnterprise#setup</a> automatically when this failure reason is reported as this can result in endpoints alternately being kicked off the Spark infrastructure. It is recommended
+                          that the application notify the user of this condition and allow them to log-in again.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Forbidden</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The authentication token provided to the SDK via the
+                          <a href="BBMEnterprise.html#authTokenCallback">BBMEnterprise#authTokenCallback</a> could not be validated or did not provide the user with sufficient permissions to access the Spark infrastructure.</p>
+                        <p>The SDK will have already made at least one attempt to refresh the token via a call to <a href="BBMEnterprise.html#authTokenCallback">BBMEnterprise#authTokenCallback</a> while attempting to regain the client's registered status
+                          with the Spark infrastructure before a <a href="BBMEnterprise.html#event:registrationChanged">BBMEnterprise#event:registrationChanged</a> event is issued with this failure reason.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>FailedToImportProfileKeys</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>Setup failed while attempting to import the profile keys for the local user via the <a href="BBMEnterprise.KeyProviderInterface.html#getProfileKeys">BBMEnterprise.KeyProviderInterface#getProfileKeys</a> function. Setup of the SDK
+                          was abandoned by the application because either the
+                          <a href="BBMEnterprise.KeyProviderInterface.html#profileKeysImportFailed">BBMEnterprise.KeyProviderInterface#profileKeysImportFailed</a> function was not defined or it returned 'AbandonSetup'.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>DomainConfigurationMismatch</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>Setup failed because the SDK was configured to use Cloud Key Storage and the domain was configured to use the BlackBerry Key Management Service (KMS). The application or the domain is misconfigured and manual intervention is required.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-readonly">read-only</span></div>
+              <h3 id="failureReason"><span class="symbol-name">failureReason</span><small class="property-type">
+            &nbsp;<a href="BBMEnterprise.Event.RegistrationChanged.html#.Failure">BBMEnterprise.Event.RegistrationChanged.Failure</a></small></h3>
+              <p>The reason given by the SDK for the failure. Please refer to the documentation on the
+                <a href="BBMEnterprise.Event.RegistrationChanged.html#.Failure">BBMEnterprise.Event.RegistrationChanged.Failure</a> enumeration for more information about the types of failures and possible recovery options.
+              </p>
+              <dl class="dl-compact">
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-readonly">read-only</span></div>
+              <h3 id="pin"><span class="symbol-name">pin</span><small class="property-type">
+            &nbsp;string</small></h3>
+              <p>The user's PIN associated with the given regId. This is guaranteed to be defined on success. On failure, this will only be defined if it's known at the time the event is emitted.</p>
+              <dl class="dl-compact">
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-readonly">read-only</span></div>
+              <h3 id="regId"><span class="symbol-name">regId</span><small class="property-type">
+            &nbsp;string</small></h3>
+              <p>The user's regId. This is guaranteed to be defined on success. On failure, this will only be defined if it's known at that time the event is emitted.</p>
+              <dl class="dl-compact">
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-readonly">read-only</span></div>
+              <h3 id="state"><span class="symbol-name">state</span><small class="property-type">
+            &nbsp;string</small></h3>
+              <p>A string to indicate the state of the registration. This may be either 'Success' or 'Failure'.</p>
+              <p>When the registration state indicates a failure has occurred, only a successful call to <a href="BBMEnterprise.html#setup">BBMEnterprise#setup</a> can allow communication with the Spark infrastructure to begin again.</p>
+              <p>It is not recommended that <a href="BBMEnterprise.html#setup">BBMEnterprise#setup</a> be called automatically upon a failed registration. The associated failureReason will provide the nature of registration failure.</p>
+              <dl class="dl-compact">
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-readonly">read-only</span></div>
+              <h3 id="registrationToken"><span class="symbol-name">registrationToken</span><small class="property-type">
+            &nbsp;string</small></h3>
+              <p>The registration token returned by the server or undefined if none was returned. This token contains trusted information about the association of the application user ID with the regId. This is guaranteed to be defined on success. On failure,
+                this will only be defined if it's known at the time the event is emitted.</p>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery.cookie.js"></script>
+  <script src="scripts/tree.jquery.js"></script>
+  <script src="scripts/prettify.js"></script>
+  <script src="scripts/jsdoc-toc.js"></script>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/scrollanchor.js"></script>
+</body>
+
+</html>
