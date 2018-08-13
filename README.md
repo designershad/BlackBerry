@@ -18,3 +18,4 @@ https://mdbootstrap.com/components/buttons/
 https://www.blackberry.com/content/dam/blackberry-com/Documents/pdf/enterprise/BlackBerry-Spark-Communications-Platform-Getting-Started-Workbook.pdf
 https://console.firebase.google.com/
 
+https://github.com/blackberry/bb-spark-javascript-samples/blob/master/Node/README.md
