@@ -2,7 +2,7 @@
   "name": "RichChat",
   "version": "1.0.0",
   "description": "The RichChat application is an in-depth & feature rich example that shows how to use BBM Enterprise SDK for JavaScript.",
-  "main": "rich_chat.html",
+  "main": "seci_chat.html",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^1.0.20",
     "bbmChat": "file:../support/ui/widgets/bbmChat",

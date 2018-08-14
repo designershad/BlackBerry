@@ -547,7 +547,7 @@ function showLogoutDialog() {
 }
 
 /**
- * Logout RichChat.
+ * Logout SECIChat.
  */
 function logout() {
   regState = undefined;

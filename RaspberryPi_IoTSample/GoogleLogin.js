@@ -4,9 +4,9 @@
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at
-// 
+//
 //  http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 //  Unless required by applicable law or agreed to in writing, software
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,9 +29,9 @@ const config = require('./config.js');
 //  Include the Firebase helper functions from the BBM Enterprise SDK Support library.
 //  Download the Node.js SDK from: https://developers.blackberry.com/us/en/products/blackberry-bbm-enterprise-sdk.html
 const FirebaseKeyProvider = require(
-  'bbm-enterprise/examples/support/protect/firebase/FirebaseKeyProvider.js');
+  'bbm-enterprise/seci/support/protect/firebase/FirebaseKeyProvider.js');
 const FirebaseUserManager = require(
-  'bbm-enterprise/examples/support/identity/FirebaseUserManager.js');
+  'bbm-enterprise/seci/support/identity/FirebaseUserManager.js');
 
 
 const querystring = require("querystring");
@@ -45,7 +45,7 @@ const oauth2 = google.oauth2('v2');
 
 //***
 //*** IMPORTANT! Point this towards the your instance of the BBM Enterprise SDK
-global.BBMEnterprise = require('bbm-enterprise'); 
+global.BBMEnterprise = require('bbm-enterprise');
 //***
 //***
 
@@ -102,7 +102,7 @@ module.exports = {
                 if(error) {
                   reject(error);
                 }
-                
+
                 // Create an SDK instance.
 								var bbmsdk = new BBMEnterprise({
                   domain: config.id_provider_domain,
@@ -131,16 +131,16 @@ module.exports = {
                       }
                     });
                   },
-                  getKeyProvider: (regId, accessToken) => 
+                  getKeyProvider: (regId, accessToken) =>
                     FirebaseKeyProvider.factory.createInstance(
                       regId,
-                      config.firebaseConfig, 
+                      config.firebaseConfig,
                       accessToken,
                       setupNeedMsg => console.warn(setupNeedMsg)
                   ),
                   description: 'node ' + process.version
                 });
-                
+
                 bbmsdk.on('registrationChanged', function(registrationInfo) {
 									console.log(registrationInfo);
                   if(registrationInfo.state === "Failure") {
@@ -158,7 +158,7 @@ module.exports = {
                     userName: result.name });
                 });
                 resolve(bbmsdk);
-								
+
               });
             }
           });

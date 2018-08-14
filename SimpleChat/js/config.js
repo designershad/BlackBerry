@@ -62,7 +62,7 @@ const AUTH_CONFIGURATION = {
   // Redirect URL same as registered on OAuth 2.0 server. Required by OAuth 2.0
   // server to redirect.
   // application after issuing an access token.
-  redirectUri : 'http://localhost:8080/examples/RichChat/rich_chat.html'
+  redirectUri : 'http://localhost:8080/seci/SECIChat/seci_chat.html'
 };
 
 // Firebase config info.
