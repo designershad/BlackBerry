@@ -38,7 +38,7 @@ const AUTH_CONFIGURATION = {
   // OAuth 2.0 endpoint for obtaining user information (name, email, avatar URL)
   // To use google user info service, put:
   // 'https://www.googleapis.com/plus/v1/people/me'
-  userInfoService : 'https://www.googleapis.com/oauth2/v2/userinfo',
+  userInfoService : 'https://www.googleapis.com/plus/v1/people/me',
 
   // Scopes of OAuth 2.0 access token (which resources it can access)
   // If google OAuth service is used, put following scopes:
