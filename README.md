@@ -19,6 +19,16 @@ BEST PROJECT EVER
 * https://console.firebase.google.com/
 * https://github.com/blackberry/bb-spark-javascript-samples/blob/master/Node/README.md
 
+```
+Failed to authenticate: Error: invalid_grant: Invalid JWT Signature.
+(node:1328) UnhandledPromiseRejectionWarning: Error: invalid_grant: Invalid JWT Signature.
+    at /home/djoksimo/SparkHackathon/Node/node_modules/gtoken/build/src/index.js:247:35
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+(node:1328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:1328) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+```
+
 
 
 ```
