@@ -20,49 +20,64 @@ BEST PROJECT EVER
 * https://github.com/blackberry/bb-spark-javascript-samples/blob/master/Node/README.md
 
 ```
-Failed to authenticate: Error: invalid_grant: Invalid JWT Signature.
-(node:1328) UnhandledPromiseRejectionWarning: Error: invalid_grant: Invalid JWT Signature.
-    at /home/djoksimo/SparkHackathon/Node/node_modules/gtoken/build/src/index.js:247:35
-    at <anonymous>
-    at process._tickCallback (internal/process/next_tick.js:188:7)
-(node:1328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-(node:1328) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+Rich Chat: BBMEnterprise setup state: Success
+firebase.js:382 Uncaught (in promise) Error: Firebase.set failed: First argument contains undefined in property 'bbmsdk.identity.users.102331310849474175166.email'
+    at ef (firebase.js:382)
+    at firebase.js:383
+    at db (firebase.js:302)
+    at ef (firebase.js:382)
+    at df (firebase.js:381)
+    at U.g.set (firebase.js:509)
+    at new FirebaseUserManager (FirebaseUserManager.js:120)
+    at firebase.auth.signInWithCredential.then.user (FirebaseUserManager.js:500)
+    at e.Fa (firebase.js:94)
+    at ud (firebase.js:98)
+ef @ firebase.js:382
+(anonymous) @ firebase.js:383
+db @ firebase.js:302
+ef @ firebase.js:382
+df @ firebase.js:381
+g.set @ firebase.js:509
+FirebaseUserManager @ FirebaseUserManager.js:120
+firebase.auth.signInWithCredential.then.user @ FirebaseUserManager.js:500
+e.Fa @ firebase.js:94
+ud @ firebase.js:98
+qd @ firebase.js:98
+C.se @ firebase.js:97
+ad @ firebase.js:91
+Promise.then (async)
+bbmeSdk.on.state @ rich_chat_script.js:345
+u.emit @ bbm_sdk_web.js:13
+R @ bbm_sdk_web.js:20
+set @ bbm_sdk_web.js:20
+o.messengerSetup @ bbm_sdk_web.js:20
+S.get.then.then.n @ bbm_sdk_web.js:20
+Promise.then (async)
+t.messengerSetup @ bbm_sdk_web.js:20
+Promise.then.e @ bbm_sdk_web.js:20
+Promise.then (async)
+I.syncStart @ bbm_sdk_web.js:20
+getUserSecret.then.result @ rich_chat_script.js:391
+Promise.then (async)
+bbmeSdk.on.state @ rich_chat_script.js:386
+u.emit @ bbm_sdk_web.js:13
+R @ bbm_sdk_web.js:20
+set @ bbm_sdk_web.js:20
+p.requestManager.retryableRequest.then.e @ bbm_sdk_web.js:20
+Promise.then (async)
+o.preMessengerSetup @ bbm_sdk_web.js:20
+S.get.then.then.then.then.then.t @ bbm_sdk_web.js:20
+Promise.then (async)
+t.preMessengerSetup @ bbm_sdk_web.js:20
+I.setupStart @ bbm_sdk_web.js:20
+BBMSignIn.resolve @ rich_chat_script.js:419
+BBMSignIn @ rich_chat_script.js:280
+authManager.authenticate.then.userInfo @ rich_chat_script.js:137
+Promise.then (async)
+logIn @ rich_chat_script.js:129
+loginIfSessionExists @ rich_chat_script.js:165
+Promise.then (async)
+(anonymous) @ rich_chat_script.js:97
+4rich_chat_script.js:273 Application has regained focus
 ```
 
-
-
-```
-<link rel='stylesheet' href='https://www.botlibre.com/css/chatlog.css' type='text/css'>
-<link rel='stylesheet' href='https://www.botlibre.com/css/blue_round_button.css' type='text/css'>
-<style>
-// You can customize the css styles here
-#botplatformbox {} #botplatformboxbar {} #botplatformboxbarmax {} #botplatformboxmin {} #botplatformboxmax {} #botplatformboxclose {} #botplatformbubble-text {} #botplatformbox-input {}
-</style>
-<script type='text/javascript' src='https://www.botlibre.com/scripts/sdk.js'></script>
-<script type='text/javascript'>
-SDK.applicationId = "3805035149723375663";
-SDK.backlinkURL = "http://www.botlibre.com/login?affiliate=djoksimovic";
-var sdk = new SDKConnection();
-var web = new WebChatbotListener();
-web.connection = sdk;
-web.instance = "23162728";
-web.instanceName = "SECI BOT";
-web.prefix = "botplatform";
-web.caption = "Chat Now";
-web.boxLocation = "bottom-right";
-web.color = "#009900";
-web.background = "#fff";
-web.css = "https://www.botlibre.com/css/chatlog.css";
-web.version = 6.0;
-web.bubble = true;
-web.backlink = true;
-web.showMenubar = true;
-web.showBoxmax = true;
-web.showSendImage = true;
-web.showChooseLanguage = true;
-web.chatLog = true;
-web.popupURL = "https://www.botlibre.com/chat?&id=23162728&embedded=true&chatLog=true&facebookLogin=false&application=3805035149723375663&bubble=true&menubar=true&chooseLanguage=true&sendImage=true&background=%23fff&prompt=You+say&send=Send&css=https://www.botlibre.com/css/chatlog.css";
-web.createBox();
-</script>
-
-```
