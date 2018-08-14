@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="generator" content="JSDoc 3.5.5">
+  <meta charset="utf-8">
+  <title>BBM Enterprise SDK for JavaScript 1.2.0 &raquo; Class: MessageId</title>
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Karla:400,400i,700,700i" type="text/css">
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Noto+Serif:400,400i,700,700i" type="text/css">
+  <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Inconsolata:500" type="text/css">
+  <link href="css/baseline.css" rel="stylesheet">
+</head>
+
+<body onload="prettyPrint()">
+  <nav id="jsdoc-navbar" role="navigation" class="jsdoc-navbar">
+    <div id="jsdoc-navbar-container">
+      <div id="jsdoc-navbar-content">
+        <a href="index.html" class="jsdoc-navbar-package-name">BBM Enterprise SDK for JavaScript 1.<wbr>2.<wbr>0</a>
+      </div>
+    </div>
+  </nav>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <div class="symbol-detail-labels"><span class="label label-kind">class</span>&nbsp;<span class="label label-static">static</span></div>
+            <h1><small><a href="BBMEnterprise.html">BBMEnterprise</a>.<wbr><a href="BBMEnterprise.Messenger.html">Messenger</a>.<wbr></small><span class="symbol-name">MessageId</span></h1>
+            <div class="symbol-classdesc">
+              <p>Provides a simple wrapper around a Uint8Array message ID that contains binary data so that it can be easily emitted as or created from a hex string.
+              </p>
+            </div>
+            <dl class="dl-compact">
+            </dl>
+          </header>
+          <section id="summary">
+            <div class="summary-callout">
+              <h2 class="summary-callout-heading">Properties</h2>
+              <div class="summary-content">
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.Messenger.MessageId.html#binary">binary</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.Messenger.MessageId.html#length">length</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                </div>
+              </div>
+            </div>
+            <div class="summary-callout">
+              <h2 class="summary-callout-heading">Methods</h2>
+              <div class="summary-content">
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.Messenger.MessageId.html#.fromString">fromString(hex)</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="BBMEnterprise.Messenger.MessageId.html#toString">toString()</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="summary-column">
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2 id="MessageId">new&nbsp;<span class="symbol-name">MessageId</span><span class="signature"><span class="signature-params">([id])</span></span>
+            </h2>
+            <p>Create a MessageId from a byte array.</p>
+            <section>
+              <h3>Parameter</h3>
+              <table class="jsdoc-details-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Optional</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>id</p>
+                    </td>
+                    <td>
+                      <p>Uint8Array</p>
+                    </td>
+                    <td>
+                      <p>Yes</p>
+                    </td>
+                    <td>
+                      <p>The byte array containing the message ID. When undefined, this will construct an empty message ID.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <dl class="dl-compact">
+            </dl>
+          </section>
+          <section>
+            <h2>Properties</h2>
+            <section>
+              <div class="symbol-detail-labels"><span class="label label-readonly">read-only</span></div>
+              <h3 id="binary"><span class="symbol-name">binary</span><small class="property-type">
+            &nbsp;Uint8Array</small></h3>
+              <p>The raw binary data.</p>
+              <dl class="dl-compact">
+              </dl>
+              <div class="symbol-detail-labels"><span class="label label-readonly">read-only</span></div>
+              <h3 id="length"><span class="symbol-name">length</span><small class="property-type">
+            &nbsp;number</small></h3>
+              <p>The byte-length of the data. This is a read-only property.</p>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+            <h2>Methods</h2>
+            <section>
+              <div class="symbol-detail-labels"><span class="label label-static">static</span></div>
+              <h3 id=".fromString"><span class="symbol-name">fromString</span><span class="signature"><span class="signature-params">(hex)</span>&nbsp;&rarr; <span class="signature-returns"> MessageId</span></span>
+              </h3>
+              <p>Returns a MessageId object constructed from the given hex encoded data string.
+              </p>
+              <section>
+                <h4>Parameter</h4>
+                <table class="jsdoc-details-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Optional</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>hex</p>
+                      </td>
+                      <td>
+                        <p>string</p>
+                      </td>
+                      <td>
+                        <p>&nbsp;</p>
+                      </td>
+                      <td>
+                        <p>The hexadecimal string representation of the data. When the string is not empty, it must contain only an even number of characters, which can be upper- or lowercase.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Throws</dt>
+                <dd>
+                  <p><code>Error</code>&nbsp;
+                    <p>When the hex string contains illegal characters or cannot be converted in its entirety.</p>
+                  </p>
+                </dd>
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>MessageId</code>&nbsp;
+                    <p>The MessageId object containing the binary representation of the given hex string data.</p>
+                  </p>
+                </dd>
+              </dl>
+              <h3 id="toString"><span class="symbol-name">toString</span><span class="signature"><span class="signature-params">()</span>&nbsp;&rarr; <span class="signature-returns"> String</span></span>
+              </h3>
+              <p>Converts the binary data to hex for readable output.</p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p>The hex representation of the binary .</p>
+                </dd>
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery.cookie.js"></script>
+  <script src="scripts/tree.jquery.js"></script>
+  <script src="scripts/prettify.js"></script>
+  <script src="scripts/jsdoc-toc.js"></script>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/scrollanchor.js"></script>
+</body>
+
+</html>

@@ -18,14 +18,14 @@
 
 // This domain is a string known to the BBM Enterprise server, which is
 // generally a GUID.
-const ID_PROVIDER_DOMAIN = 'your_idp_domain';
+const ID_PROVIDER_DOMAIN = '53cc1df0-469b-4438-9a1f-02d287902608';
 
 // The environment of your BBM Enterprise server. Must be either 'Sandbox' or
 // 'Production'.
 const ID_PROVIDER_ENVIRONMENT = 'Sandbox';
 
 // This secret is used to protect user keys. Must be individual for each user.
-const USER_SECRET = 'user_secret';
+const USER_SECRET = '5456';
 
 // The URL or relative path of the Argon2 WASM file.
 const KMS_ARGON_WASM_URL = '../../sdk/argon2.wasm';
@@ -39,40 +39,40 @@ const AUTH_CONFIGURATION = {
   // OAuth 2.0 endpoint for requesting an access token
   // To use google OAuth service, put:
   // 'https://accounts.google.com/o/oauth2/v2/auth'
-  authService : 'your_auth_service_endpoint',
+  authService : 'https://accounts.google.com/o/oauth2/v2/auth',
 
   // OAuth 2.0 endpoint for token validation
   // To use google token info service, put:
   // 'https://www.googleapis.com/oauth2/v3/tokeninfo'
-  tokenInfoService : 'your_oauth_token_info_endpoint',
+  tokenInfoService : 'https://www.googleapis.com/oauth2/v3/tokeninfo',
 
   // OAuth 2.0 endpoint for obtaining user information (name, email, avatar URL)
   // To use google user info service, put:
   // 'https://www.googleapis.com/plus/v1/people/me'
-  userInfoService : 'your_oauth_user_info_endpoint',
+  userInfoService : 'https://www.googleapis.com/oauth2/v2/userinfo',
 
   // Scopes of OAuth 2.0 access token (which resources it can access)
   // If google OAuth service is used, put following scopes:
   // 'https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/userinfo.email'
-  scope : 'your_scope_oauth',
+  scope : 'https://www.googleapis.com/auth/firebase',
 
   // The client ID of application registered on OAuth 2.0 server.
-  clientId: 'your_client_id',
+  clientId: '692019736429-1j73bv11gr68dp7eo90ado9r0kr0v875.apps.googleusercontent.com',
 
   // Redirect URL same as registered on OAuth 2.0 server. Required by OAuth 2.0
   // server to redirect.
   // application after issuing an access token.
-  redirectUri : 'your_redirect_url'
+  redirectUri : 'http://localhost:8080/examples/RichChat/rich_chat.html'
 };
 
 // Firebase config info.
 const FIREBASE_CONFIG = {
-    apiKey: 'your_api_key',
-    authDomain: 'your_auth_domain',
-    databaseURL: 'your_database_url',
-    projectId: 'your_project_id',
-    storageBucket: 'your_storage_bucket',
-    messagingSenderId: 'your_messaging_sender_id'
+  apiKey: "AIzaSyDOH3eLgNoEYDskmlwUpMRgkpweAf0IBnY",
+  authDomain: "sparkhackathon.firebaseapp.com",
+  databaseURL: "https://sparkhackathon.firebaseio.com",
+  projectId: "sparkhackathon",
+  storageBucket: "sparkhackathon.appspot.com",
+  messagingSenderId: "757672568611"
 };
 
 // Create the auth manager for the Simple Chat app.
