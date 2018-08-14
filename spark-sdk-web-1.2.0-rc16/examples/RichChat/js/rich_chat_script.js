@@ -7,7 +7,7 @@
 //
 
 /**
- * A rich chat app.
+ * SECI chat.
  *
  * @class RichChat
  * @memberof Examples
@@ -106,7 +106,7 @@ try {
  * Function initiates user log in.
  * 1. Acquires access token and user info from customer auth service.
  * 2. Sign in user to BBM.
- */ 
+ */
 function logIn() {
   // First check for mandatory config.
   const missing = [];
@@ -143,7 +143,7 @@ function logIn() {
   });
 }
 
-// Using localStorage to start connection with the servers for a user who is 
+// Using localStorage to start connection with the servers for a user who is
 // already logged in.
 function loginIfSessionExists() {
   var userID = localStorage.userID;
@@ -252,7 +252,7 @@ function BBMSignIn(authUserInfo, authManager) {
       }
       showRegistrationFailure('Failed to initialize the BBM Enterprise SDK');
     }
-    
+
     // Listen to the related registration callback event.
     bbmeSdk.on('registrationChanged', onRegistrationError);
 
@@ -284,7 +284,7 @@ function BBMSignIn(authUserInfo, authManager) {
         setupComplete.then(() => {
           // Only process the new chat after setup completes.
           const chat = chatAddedEvent.chat;
-          console.log(`Rich Chat: chatAdded - chat Id: ${chat.chatId}`);
+          console.log(`SECI CHAT: chatAdded - chat Id: ${chat.chatId}`);
           addChatElement(chat);
         });
       });
@@ -294,7 +294,7 @@ function BBMSignIn(authUserInfo, authManager) {
          setupComplete.then(() => {
           // Only process the chat update after setup completes
           var chat = chatUpdatedEvent.chat;
-          console.log(`Rich Chat: chatUpdated - chat Id: ${chat.chatId}`);
+          console.log(`SECI Chat: chatUpdated - chat Id: ${chat.chatId}`);
           updateChatElement(chat);
         });
       });
@@ -303,15 +303,15 @@ function BBMSignIn(authUserInfo, authManager) {
       // completes.
       bbmeSdk.messenger.on('chatRemoved', chatRemovedEvent => {
         const chat = chatRemovedEvent.chat;
-        console.log(`Rich Chat: chatRemoved - chat Id: ${chat.chatId}`);
+        console.log(`SECI Chat: chatRemoved - chat Id: ${chat.chatId}`);
         removeChatElement(chat);
       });
 
-      // Listen for new messages to show a notification and update the new 
+      // Listen for new messages to show a notification and update the new
       // message count.
       bbmeSdk.messenger.on('chatMessageAdded', chatMessage => {
         console.log(
-          `Rich Chat: chatMessageAdded - chatId: ${chatMessage.message.chatId}`
+          `SECI Chat: chatMessageAdded - chatId: ${chatMessage.message.chatId}`
           + ` messageId: ${chatMessage.message.messageId}`);
 
         // Show a notification that a new message has arrived.
@@ -324,14 +324,14 @@ function BBMSignIn(authUserInfo, authManager) {
       // Listen for message updates to update the new message count.
       bbmeSdk.messenger.on('chatMessageUpdated', chatMessage => {
         console.log(
-          `Rich Chat: chatMessageUpdated - chatId: ${chatMessage.message.chatId}`
+          `SECI Chat: chatMessageUpdated - chatId: ${chatMessage.message.chatId}`
           + ` messageId: ${chatMessage.message.messageId}`);
         updateChatElement(bbmeSdk.messenger.getChat(chatMessage.message.chatId));
       });
 
       // Handle setup state changes.
       bbmeSdk.on('setupState', state => {
-        console.log(`Rich Chat: BBMEnterprise setup state: ${state.value}`);
+        console.log(`SECI Chat: BBMEnterprise setup state: ${state.value}`);
         switch (state.value) {
           case BBMEnterprise.SetupState.Success: {
             isSyncStarted = false;
@@ -568,7 +568,7 @@ function logout() {
 function removeLoginSession() {
   // Clean up the userID from the localStorage to show the login screen.
   localStorage.removeItem('userID');
-  console.log('Rich Chat: User signed out.');
+  console.log('SECI Chat: User signed out.');
   $('#loginBtnDiv').show();
   $('#loginStatus').html('');
 
@@ -768,7 +768,7 @@ function showSettingsPane() {
   document.getElementById('domain').innerHTML = `Domain: ${ID_PROVIDER_DOMAIN}`;
   document.getElementById('localRegId').innerHTML = `Local RegId: ${userRegId}`;
   document.getElementById('localPIN').innerHTML = `Local PIN: ${userPin}`;
-  document.getElementById('registrationState').innerHTML = 
+  document.getElementById('registrationState').innerHTML =
     `Registration State: ${regState}`;
 }
 
@@ -798,7 +798,7 @@ function getDisplayName(regId) {
   var contactName = contactsManager.getDisplayName(regId);
   if (contactName === null) {
     // Escape user name to prevent any JavaScript in it from executing.
-    contactName = regId === userRegId 
+    contactName = regId === userRegId
       ? escapeUserTextToDisplay(userName)
       : regId;
   }
@@ -860,7 +860,7 @@ function createChatRowElementId(chatId) {
     .then(unreadCount => {
       if (unreadCount > 0) {
         const chatElement = $('#' + createChatRowElementId(chatId));
-        const newElementContent = 
+        const newElementContent =
           $.parseHTML(createChatElement(chatId, unreadCount));
         chatElement.removeChild(chatElement.childNodes[0]);
         chatElement.appendChild(newElementContent);
@@ -872,7 +872,7 @@ function createChatRowElementId(chatId) {
     //
     // This should not happen but still good to have this code to avoid the
     // duplicated chats in the current database.
-    console.log(`Rich Chat: Chats map already has an entry with the same `
+    console.log(`SECI Chat: Chats map already has an entry with the same `
       + `chatId: ${chatId}. This Chat will be ignored.`);
   }
 }
@@ -890,7 +890,7 @@ function updateChatElement(chat) {
     chatData.set(DATA_CHAT, chat);
   } else {
     // Prevent the map from updating a chat that was never added before.
-    console.log(`Rich Chat: The chat: ${chatId} has never been added to map `
+    console.log(`SECI Chat: The chat: ${chatId} has never been added to map `
       + `before. Ignore this update.`);
   }
 }
@@ -912,10 +912,10 @@ function removeChatElement(chat) {
     if (selectedChatId === chatId) {
       // Yes.  Just close the active chat abruptly. We could do something
       // fancier here like notify the user and disable the pane so the user has
-      // a nicer experience, we don't to keep the example code interaction 
+      // a nicer experience, we don't to keep the example code interaction
       // simple. This also prevents the active pane from acting on the removed
       // chat which will raise errors in the console.
-      console.log(`Rich Chat: The active chat with chatId: ${chatId} `
+      console.log(`SECI Chat: The active chat with chatId: ${chatId} `
         + `was removed; closing the conversation pane`);
 
       // Set the default place holder on the conversation pane and hide the
@@ -932,7 +932,7 @@ function removeChatElement(chat) {
   }
   else {
     // Prevent the map from removing a chat that was never added before.
-    console.log(`Rich Chat: The chat: ${chatId} has never been added to map `
+    console.log(`SECI Chat: The chat: ${chatId} has never been added to map `
     + ` before. Ignore this removal.`);
   }
 }
@@ -998,7 +998,7 @@ function getChatAvatarElement(chatData, className, defaultAvatarURL) {
 
     if (Array.isArray(participants)) {
       // Find the other participant's regId.
-      var participant = chat.participants.find(participant => 
+      var participant = chat.participants.find(participant =>
         participant.regId !== userRegId);
 
       if (participant !== undefined) {
@@ -1041,7 +1041,7 @@ function getChatSubjectElement(chatData, className, defaultSubject, unreadCount)
         participant.regId !== userRegId).regId;
 
       subject = '<div class="' + className + unreadIndicator
-        +'"><div style="display: inline-block" class="' + className 
+        +'"><div style="display: inline-block" class="' + className
         + unreadIndicator + '" '
         + DATA_BIND_PREFIX + DATA_BIND_PREFIX_CONTACT
         + correctHTMLAttributeName(regId)
@@ -1090,7 +1090,7 @@ function getChatSubjectElement(chatData, className, defaultSubject, unreadCount)
       //For MPC, just use its subject
       subject = '<div class="' + className + unreadIndicator + '">'
         + (chat.subject.length > 0
-            ? escapeUserTextToDisplay(chat.subject) 
+            ? escapeUserTextToDisplay(chat.subject)
               : (defaultSubject === undefined ? 'No subject' :  defaultSubject))
         + unreadCountText
         + '</div>';
@@ -1120,7 +1120,7 @@ function showNotification(message) {
   // Actually display the notification. This is done only after checking that we
   //  have permission.
   function displayNotification() {
-    var notification = new Notification('RichChat', {
+    var notification = new Notification('SECI Chat', {
       body: messageFormatter.getMessageText(message.message),
       icon: 'images/favicon.ico',
       timestamp: true,
@@ -1210,7 +1210,7 @@ function BBMData(id) {
 }
 
 /**
- * A data binder follows publish/subscribe pattern to bind changes to a data 
+ * A data binder follows publish/subscribe pattern to bind changes to a data
  * object’s properties to changes in the UI elements.
  * @param {string} objectId The identity of the data object.
  * @returns {object} The jQuery object to trigger the data change.

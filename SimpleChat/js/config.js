@@ -49,12 +49,12 @@ const AUTH_CONFIGURATION = {
   // OAuth 2.0 endpoint for obtaining user information (name, email, avatar URL)
   // To use google user info service, put:
   // 'https://www.googleapis.com/plus/v1/people/me'
-  userInfoService : 'https://www.googleapis.com/oauth2/v2/userinfo',
+  userInfoService : 'https://www.googleapis.com/plus/v1/people/me',
 
   // Scopes of OAuth 2.0 access token (which resources it can access)
   // If google OAuth service is used, put following scopes:
   // 'https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/userinfo.email'
-  scope : 'https://www.googleapis.com/auth/firebase',
+  scope : 'https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/userinfo.email',
 
   // The client ID of application registered on OAuth 2.0 server.
   clientId: '692019736429-1j73bv11gr68dp7eo90ado9r0kr0v875.apps.googleusercontent.com',
